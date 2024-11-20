@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  build:
+  democicd:
     runs-on: ubuntu-latest
 
     steps:    
