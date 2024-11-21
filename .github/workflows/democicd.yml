@@ -34,8 +34,11 @@ jobs:
     - name: Install dependencies
       run: npm install
       
-    - name: Build project
-      run: npm run build  
+    - name: Create artifact
+      run: |
+        mkdir -p build-artifact
+        cp -r build/* build-artifact/
+        zip -r build-artifact.zip build-artifact
       
     - name: Run unit tests
       run: npm test
